@@ -90,7 +90,7 @@ function recreateTables()
 	/* Create the bookmark hyperlink */
 	var link = document.getElementById('saveLink');
 	if (link) {
-		link.href = 'subnet.php?network='+inet_ntoa(curNetwork)+'&mask='+curMask+'&division='+binToAscii(nodeToString(rootSubnet));
+		link.href = '?network='+inet_ntoa(curNetwork)+'&mask='+curMask+'&division='+binToAscii(nodeToString(rootSubnet));
 	}
 }
 
