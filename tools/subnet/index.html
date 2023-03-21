@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="default">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Subnet Calculator</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+		<style>
+			body {
+				margin: 0;
+				color: #f1f1f1;
+				background-color: #363636;
+			}
+			.header {
+				/* top: 0;
+				left: auto;
+				right: 0;
+				position: fixed;
+				*/
+				color: #f1f1f1;
+				height: 4.125rem;
+				z-index: 1000;
+				background: rgba(26, 29, 33, 0.9);
+				padding: 15px;
+			}
+			.header .branding {
+				font-size: 20px;
+			}
+			#content {
+				margin-top: 20px;
+				padding: 20px;
+				background-color: #2b2b2b;
+			}
+			.classIMG {
+				filter: brightness(0) invert(1);	
+			}
+			table {
+				width: 100%;	
+			}
+		</style>
+		<script language="javascript" type="text/javascript" src="/tools/subnet/subnet.js"></script>
+	</head>
+	<body>
+
+		<div class="header">
+			<div class="container">
+				<div class="branding">Subnet Calculator</div>
+			</div>
+		</div>
+
+		<div id="content" class="container">
+
+			<table width="100%">
+				<tr valign=top>
+					<td>
+
+						<h1>Subnet Calculator</h1>
+
+						<p>Enter the network you wish to subnet:</p>
+
+						<form name="calc" onsubmit="updateNetwork(); return false;">
+
+							<table cellspacing="0">
+								<tr>
+									<td class="label">Network Address</td>
+									<td class="label">Mask bits</td>
+								</tr>
+								<tr>
+									<td><input type="text" name="network" size="15" maxlength="15" value="192.168.0.0"></td>
+									<td>/<input type="text" name="netbits" size="2" maxlength="2" value="16"></td>
+									<td><input type="submit" value="Update">
+										<input type="button" value="Reset" onclick="if (confirm('This will reset all subnet divisions you have made. Proceed?')) startOver();">
+									</td>
+								</tr>
+							</table>
+
+							<p>Show columns: 
+								<input type="checkbox" id="cb_subnet" checked onclick="toggleColumn(this)"><label for="cb_subnet">Subnet address</label>
+								<input type="checkbox" id="cb_netmask" onclick="toggleColumn(this)"><label for="cb_netmask">Netmask</label>
+								<input type="checkbox" id="cb_range" checked onclick="toggleColumn(this)"><label for="cb_range">Range of addresses</label>
+								<input type="checkbox" id="cb_useable" checked onclick="toggleColumn(this)"><label for="cb_useable">Useable IP Range</label>
+								<input type="checkbox" id="cb_hosts" checked onclick="toggleColumn(this)"><label for="cb_hosts">Useable IPs</label>
+								<input type="checkbox" id="cb_divide" checked onclick="toggleColumn(this)"><label for="cb_divide">Divide</label>
+								<input type="checkbox" id="cb_join" checked onclick="toggleColumn(this)"><label for="cb_join">Join</label>
+							</p>
+						</form>
+
+						<p>Click below to split and join subnets.<br>
+							If you wish to save this subnetting for later, bookmark <a href="https://lsmith.co.uk/tools/subnet.php" id="saveLink">this hyperlink</a>.</p>
+
+					</td>
+				</tr>
+			</table>
+
+			<br>
+			<hr noshade color="black" size="1">
+			<br>
+			<div class="table-responsive">
+				<table class="calc table-striped table-bordered table-hover" cellspacing="0" cellpadding="2">
+					<thead>
+						<tr>
+							<th id="subnetHeader">Subnet address</th>
+							<th id="netmaskHeader">Netmask</th>
+							<th id="rangeHeader">Range of addresses</th>
+							<th id="useableHeader">Useable IP Range</th>
+							<th id="hostsHeader">Useable IPs</th>
+							<th id="divideHeader">Divide</th>
+							<th id="joinHeader">Join</th>
+						</tr>
+					</thead>
+					<tbody id="calcbody">
+						<!--tr>
+<td>130.94.203.0/24</td>
+<td>130.94.203.0 - 130.94.203.255</td>
+<td>130.94.203.1 - 130.94.203.254 (254)</td>
+<td>Divide</td>
+</tr-->
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</body>
+</html>
