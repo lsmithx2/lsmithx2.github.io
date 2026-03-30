@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <title>Lee Smith CV</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.5; color: #333; max-width: 850px; margin: 40px auto; padding: 20px; background-color: #f4f4f4; }
-        .cv-container { background: white; padding: 50px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { margin-bottom: 5px; color: #004a99; text-transform: uppercase; letter-spacing: 1px; }
-        .contact-info { margin-bottom: 30px; font-size: 0.9em; border-bottom: 2px solid #004a99; padding-bottom: 10px; }
-        h2 { color: #004a99; border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-top: 25px; text-transform: uppercase; font-size: 1.2em; }
-        h3 { margin-bottom: 2px; font-size: 1.1em; color: #222; }
-        .job-title { font-weight: bold; color: #444; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.4; color: #333; max-width: 850px; margin: 20px auto; padding: 20px; background-color: #f4f4f4; }
+        .cv-container { background: white; padding: 40px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { margin: 0; color: #004a99; text-transform: uppercase; letter-spacing: 1px; }
+        .contact-info { margin-bottom: 20px; font-size: 0.9em; border-bottom: 2px solid #004a99; padding-bottom: 10px; }
+        h2 { color: #004a99; border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-top: 20px; text-transform: uppercase; font-size: 1.1em; }
+        h3 { margin-bottom: 2px; font-size: 1.05em; color: #222; }
+        .job-title { font-weight: bold; color: #444; font-style: italic; }
         .date { float: right; font-weight: normal; color: #666; }
-        ul { padding-left: 20px; margin-top: 5px; }
-        li { margin-bottom: 4px; }
-        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        ul { padding-left: 18px; margin-top: 5px; }
+        li { margin-bottom: 3px; }
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.95em; }
         .skill-cat { font-weight: bold; color: #004a99; }
         @media print {
             body { background: none; margin: 0; padding: 0; }
-            .cv-container { box-shadow: none; padding: 20px; }
-            button { display: none; }
+            .cv-container { box-shadow: none; padding: 10px; }
         }
     </style>
 </head>
@@ -33,7 +32,7 @@
     </div>
 
     <h2>Professional Profile</h2>
-    <p>A highly accomplished <strong>Senior Systems Administrator & Network Engineer</strong> with over 15 years of experience. A specialist in <strong>greenfield network deployments</strong>, with a proven track record of designing, building, and managing complex IT infrastructures from the ground up. Expert in IP networking, VLAN segmentation, and multi-platform virtualization, with a hands-on approach to structured cabling and wireless links.</p>
+    <p>A highly accomplished <strong>Senior Systems Administrator & Network Engineer</strong> with over 15 years of experience. A specialist in <strong>greenfield network deployments</strong>, having designed and implemented enterprise-grade infrastructures from the ground up. Expert in multi-platform virtualization (Proxmox), VLAN segmentation, and secure routing using Meraki and Ubiquiti ecosystems.</p>
 
     <h2>Technical Skills</h2>
     <div class="skills-grid">
@@ -46,13 +45,29 @@
     <h2>Professional Experience</h2>
     
     <div>
-        <h3>Naked Kitchens / Norfolk Oak <span class="date">2016 – Present</span></h3>
-        <div class="job-title">Senior Systems Administrator</div>
+        <h3>Naked Kitchens / Norfolk Oak <span class="date">Mar 2016 – Present</span></h3>
+        <div class="job-title">IT Systems & Network Manager / Web Developer</div>
         <ul>
-            <li><strong>Full Infrastructure Build-Out:</strong> Designed and implemented the entire company network from the ground up, including physical cabling and cabinet builds.</li>
-            <li><strong>Network Architecture:</strong> Managed high-performance routing using Ubiquiti EdgeRouters, Cisco Meraki Firewalls, and UniFi ecosystems.</li>
-            <li><strong>Virtualization:</strong> Successfully migrated physical server estates to Proxmox clusters (Ubuntu, Debian, and Windows).</li>
-            <li><strong>Security & VLANs:</strong> Engineered secure multi-VLAN environments to isolate production, office, and IP CCTV traffic.</li>
+            <li><strong>Ground-Up Network Build:</strong> Designed and implemented the entire company network infrastructure, including all structured cabling, cabinets, and rack hardware.</li>
+            <li><strong>Hardware Deployment:</strong> Managed high-performance routing and security via <strong>Cisco Meraki Firewalls</strong> and <strong>Ubiquiti EdgeRouters</strong>.</li>
+            <li><strong>Proxmox Virtualization:</strong> Migrated physical server estates to virtual clusters running <strong>Ubuntu, Debian, and Windows Server</strong>.</li>
+            <li><strong>Security:</strong> Isolated production and IP CCTV traffic via secure <strong>VLAN</strong> segmentation and enforced strict data privacy protocols.</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Anglian Radio <span class="date">Aug 2015 – Jun 2017</span></h3>
+        <div class="job-title">IT Consultant</div>
+        <ul>
+            <li>Provided expert consultancy on network security, system administration, and troubleshooting for broadcast IT infrastructure.</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>North Norfolk Radio Limited <span class="date">May 2015 – Jun 2017</span></h3>
+        <div class="job-title">Street Team Member / Driver</div>
+        <ul>
+            <li>Coordinated logistical operations and maintained vehicle and equipment readiness for community events.</li>
         </ul>
     </div>
 
@@ -60,29 +75,36 @@
         <h3>Fibreserv, Holt <span class="date">2010 – 2020</span></h3>
         <div class="job-title">Managing Director</div>
         <ul>
-            <li><strong>ISP & Hosting:</strong> Managed web hosting environments and virtualised client services using Linux stacks.</li>
-            <li><strong>Field Engineering:</strong> Deployed high-speed Point-to-Point (PtP) wireless links and professional cabling projects.</li>
+            <li>Directed network server management for client website hosting and deployed Point-to-Point (PtP) wireless links.</li>
         </ul>
     </div>
 
     <div>
-        <h3>County and Coast, Cromer <span class="date">2010 – 2012</span></h3>
+        <h3>Kongskilde Industries A/S <span class="date">Mar 2014 – Jul 2015</span></h3>
+        <div class="job-title">Trainee Parts Assistant</div>
+        <ul>
+            <li>Managed order processing and technical support for agricultural components via internal computer systems.</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>County & Coast <span class="date">Jun 2010 – Jul 2011</span></h3>
         <div class="job-title">IT Manager / Web Developer</div>
         <ul>
-            <li>Maintained core office network integrity, physical hardware, and internal DNS/DHCP server roles.</li>
-            <li>Managed company web presence using HTML, CSS, and PHP.</li>
+            <li>Managed multi-site network infrastructure, server hardware, and secure web development projects.</li>
         </ul>
     </div>
 
     <h2>Education & Training</h2>
-    <ul>
-        <li><strong>Information Technology:</strong> Higher Diploma (Level 2) | City College Norwich</li>
-        <li><strong>Business & Administration:</strong> NVQ & BTEC Level 2 | PDM Training</li>
-        <li><strong>Continuous Learning:</strong> Cybersecurity best practices, AD Management, and Cloud Networking.</li>
-    </ul>
+    <div class="skills-grid">
+        <div><strong>Higher Diploma (Level 2):</strong> IT | City College Norwich</div>
+        <div><strong>NVQ & BTEC Level 2:</strong> Business & Admin | PDM Training</div>
+        <div><strong>Functional Skills Level 2:</strong> English, Maths, & ICT</div>
+        <div><strong>GCSEs:</strong> Including English & Maths | Cromer High School</div>
+    </div>
 
     <h2>Interests</h2>
-    <p>Mechanical restoration of cars and motorcycles; home-labbing with Proxmox; following emerging networking hardware trends.</p>
+    <p>Mechanical restoration of cars and motorcycles; home-labbing with Proxmox; following emerging networking and cybersecurity trends.</p>
 </div>
 
 </body>
